@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
  * print_int - prints a given integer from variadic parameters
@@ -30,7 +31,7 @@ int print_int(va_list args)
 	}
 
 	/*Write the contents of the array to stdout*/
-	for (i; i >= 0; i--)
+	for (; i >= 0; i--)
 	{
 		x[0] = ('0' + my_arr[i]); /*Convert int to char*/
 		count += write(1, x, 1);

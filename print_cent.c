@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
+#include <unistd.h>
 
 /**
 * print_cent - Checks for % symbol in _print func
