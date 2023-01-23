@@ -6,7 +6,13 @@
 int _printf(const char *format, ...);
 int (*check_specifier(const char *))(va_list);
 
-typedef struct func 
+/**
+* struct func - struct for specifier to printer
+* @t: character to compare
+* @f: function to handle printing
+*/
+
+typedef struct func
 {
 char *t;
 int (*f)(va_list);
