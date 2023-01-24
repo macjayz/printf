@@ -31,6 +31,7 @@ int _printf(const char *format, ...)
 		}
 		if (format[i] == '%')
 		{
+			
 			f = check_specifier(&format[i + 1]);
 			if (f != NULL)
 			{
@@ -39,17 +40,15 @@ int _printf(const char *format, ...)
 				i = i + 2;
 				continue;
 			}
-			if (format[i + 1] == '\0')
-				break;
-			if (format[i + 1] != '\0')
+			else
 			{
-				value = write(1, &format[i + 1], 1);
+				value = write(1, "%", 1);
 				count = count + value;
-			i = i + 2;
+			i++;
 			continue;
 			}
-
-		}
+			i +=2;
+		} i++;
 	}
 	return (count);
 }
