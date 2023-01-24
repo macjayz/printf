@@ -18,12 +18,10 @@ int _printf(const char *format, ...)
 	int (*f)(va_list);
 
 	va_start(args, format);
-	if (format == NULL)
-		return (-1);
-	while (format[i] != '\0')
+	while (format != NULL && format[i])
 	{
 
-		if (format[i] != '%')
+		if (format[i] != '%' && format[i] != '\0')
 		{
 			value = write(1, &format[i], 1);
 			count = count + value;
