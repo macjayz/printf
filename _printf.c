@@ -31,7 +31,6 @@ int _printf(const char *format, ...)
 		}
 		if (format[i] == '%')
 		{
-			
 			f = check_specifier(&format[i + 1]);
 			if (f != NULL)
 			{
@@ -47,7 +46,7 @@ int _printf(const char *format, ...)
 			i++;
 			continue;
 			}
-			i +=2;
+			i += 2;
 		} i++;
 	}
 	return (count);
